@@ -1,0 +1,6 @@
+git fetch upstream 
+#fetches any new changes from the original repository 
+#(which I called upstream when I setup the remote)
+
+git merge upstream/master
+#Mergers any changes fetched into working files (creates a commit)
