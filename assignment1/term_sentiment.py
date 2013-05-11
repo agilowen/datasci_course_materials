@@ -121,7 +121,7 @@ def main():
 
     for new_term in new_terms_pos_neg_dict:
         score = calculate_new_term_score(new_terms_pos_neg_dict[new_term][0], new_terms_pos_neg_dict[new_term][1])
-        print new_term + " %0.4f" % score
+        print new_term.encode("utf-8") + " %0.4f" % score
 
 if __name__ == '__main__':
     main()
