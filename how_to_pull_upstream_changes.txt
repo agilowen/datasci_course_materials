@@ -4,3 +4,6 @@ git fetch upstream
 
 git merge upstream/master
 #Mergers any changes fetched into working files (creates a commit)
+
+git push origin master
+#pushes the changes to github
