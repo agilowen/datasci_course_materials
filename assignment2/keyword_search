@@ -1,0 +1,5 @@
+SELECT MAX(score) FROM
+(SELECT B.docid, SUM(A.count * B.count) as score
+FROM frequency_augmented as A JOIN frequency_augmented as B
+ON A.term = B.term AND A.docid = 'q'
+GROUP BY A.docid, B.docid);
