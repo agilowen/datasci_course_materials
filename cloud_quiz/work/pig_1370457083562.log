@@ -1,0 +1,43 @@
+Pig Stack Trace
+---------------
+ERROR 1200: Pig script failed to parse: 
+<file Problem3_local.pig, line 14, column 57> Invalid scalar projection: subjects : A column needs to be projected from a relation for it to be used as a scalar
+
+org.apache.pig.impl.logicalLayer.FrontendException: ERROR 1000: Error during parsing. Pig script failed to parse: 
+<file Problem3_local.pig, line 14, column 57> Invalid scalar projection: subjects : A column needs to be projected from a relation for it to be used as a scalar
+	at org.apache.pig.PigServer$Graph.parseQuery(PigServer.java:1606)
+	at org.apache.pig.PigServer$Graph.registerQuery(PigServer.java:1549)
+	at org.apache.pig.PigServer.registerQuery(PigServer.java:549)
+	at org.apache.pig.tools.grunt.GruntParser.processPig(GruntParser.java:971)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:386)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:190)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:166)
+	at org.apache.pig.tools.grunt.Grunt.exec(Grunt.java:84)
+	at org.apache.pig.Main.run(Main.java:555)
+	at org.apache.pig.Main.main(Main.java:111)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:156)
+Caused by: Failed to parse: Pig script failed to parse: 
+<file Problem3_local.pig, line 14, column 57> Invalid scalar projection: subjects : A column needs to be projected from a relation for it to be used as a scalar
+	at org.apache.pig.parser.QueryParserDriver.parse(QueryParserDriver.java:184)
+	at org.apache.pig.PigServer$Graph.parseQuery(PigServer.java:1598)
+	... 14 more
+Caused by: 
+<file Problem3_local.pig, line 14, column 57> Invalid scalar projection: subjects : A column needs to be projected from a relation for it to be used as a scalar
+	at org.apache.pig.parser.LogicalPlanGenerator.var_expr(LogicalPlanGenerator.java:8764)
+	at org.apache.pig.parser.LogicalPlanGenerator.expr(LogicalPlanGenerator.java:7984)
+	at org.apache.pig.parser.LogicalPlanGenerator.flatten_clause(LogicalPlanGenerator.java:6103)
+	at org.apache.pig.parser.LogicalPlanGenerator.flatten_generated_item(LogicalPlanGenerator.java:5926)
+	at org.apache.pig.parser.LogicalPlanGenerator.generate_clause(LogicalPlanGenerator.java:14101)
+	at org.apache.pig.parser.LogicalPlanGenerator.foreach_plan(LogicalPlanGenerator.java:12493)
+	at org.apache.pig.parser.LogicalPlanGenerator.foreach_clause(LogicalPlanGenerator.java:12360)
+	at org.apache.pig.parser.LogicalPlanGenerator.op_clause(LogicalPlanGenerator.java:1577)
+	at org.apache.pig.parser.LogicalPlanGenerator.general_statement(LogicalPlanGenerator.java:789)
+	at org.apache.pig.parser.LogicalPlanGenerator.statement(LogicalPlanGenerator.java:507)
+	at org.apache.pig.parser.LogicalPlanGenerator.query(LogicalPlanGenerator.java:382)
+	at org.apache.pig.parser.QueryParserDriver.parse(QueryParserDriver.java:177)
+	... 15 more
+================================================================================
